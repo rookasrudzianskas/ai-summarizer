@@ -11,7 +11,7 @@ const App = () => {
       </div>
 
       <div className='app'>
-        {/*<Hero />*/}
+        <Hero />
         {/*<Demo />*/}
       </div>
     </main>
