@@ -21,7 +21,7 @@ const Demo = () => {
     if(data?.summary) {
       const newArticle = { ...article, summary: data.summary };
       setArticle(newArticle);
-      console.log(newArticle);
+
     }
   }
 
