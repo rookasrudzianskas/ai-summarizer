@@ -12,7 +12,7 @@ const App = () => {
 
       <div className='app'>
         <Hero />
-        {/*<Demo />*/}
+        <Demo />
       </div>
     </main>
   );
