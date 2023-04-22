@@ -15,6 +15,7 @@ export const articleApi = createApi({
     }),
     endpoints: (builder) => ({
         getSummary: builder.query({
+            // encodeURIComponent removes the strange characters from the URL
             query: (params) => `summarize?url=${encodeURIComponent(params.articleUrl)}&length=3`,
         }),
     })
