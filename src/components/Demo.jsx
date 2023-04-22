@@ -12,7 +12,7 @@ const Demo = () => {
   const [copied, setCopied] = useState("");
 
   const handleSubmit = async (e) => {
-    alert('Submitted')
+    e.preventDefault();
   }
 
   return (
