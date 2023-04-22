@@ -8,11 +8,21 @@ const Demo = () => {
     url: "",
     summary: "",
   });
+
+  const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
+
   const [allArticles, setAllArticles] = useState([]);
   const [copied, setCopied] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const { data } = await getSummary({ articleUrl: article.url });
+
+    if(data?.summary) {
+      const newArticle = { ...article, summary: data.summary };
+      setArticle(newArticle);
+      console.log(newArticle);
+    }
   }
 
   return (
